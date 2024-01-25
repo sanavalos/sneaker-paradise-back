@@ -1,3 +1,5 @@
+require("dotenv").config();
+const {CLOUDINARY_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET} = process.env
 const { Router } = require("express");
 const chalk = require("chalk");
 const {
@@ -16,9 +18,9 @@ const cloudinary = require("cloudinary");
 const fs = require("fs-extra");
 
 cloudinary.config({
-  cloud_name: "dj960qol0",
-  api_key: "521339563273244",
-  api_secret: "SCNE3oZRw9JYQjsckO7ANrPusYg",
+  cloud_name: CLOUDINARY_NAME,
+  api_key: CLOUDINARY_API_KEY,
+  api_secret: CLOUDINARY_API_SECRET,
 });
 
 const router = Router();
